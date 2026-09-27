@@ -1,4 +1,29 @@
 @startuml class
 left to right direction
 
+class User {
+  +id : String <<PK>>
+  +name : String
+  +about : String
+  -passwd : Binary
+}
+
+class Course {
+  +prefix : String <<PK>>
+  +number : String <<PK>>
+  +name : String
+  +credits : Integer
+}
+
+class Enrollment {
+  +user_id : String <<PK, FK>>
+  +course_prefix : String <<PK, FK>>
+  +course_number : String <<PK, FK>>
+  +grade : String
+}
+
+User "1" -- "0..*" Enrollment : enrollments
+Course "1" -- "0..*" Enrollment : enrollments
+User "0..*" -- "0..*" Course : courses / students >
+
 @enduml
