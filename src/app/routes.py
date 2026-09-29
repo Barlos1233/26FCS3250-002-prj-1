@@ -20,20 +20,42 @@ import bcrypt
 def index(): 
     return render_template('index.html')
 
-# TODO: from hwk-3
 @app.route('/users/signup', methods=['GET', 'POST'])
 def signup():
-    return "Work in progress..."
-    
-# TODO: from hwk-3
+    form = SignUpForm()
+    if form.validate_on_submit():
+        if form.passwd.data != form.passwd_confirm.data:
+            form.passwd_confirm.errors.append('Passwords do not match.')
+        elif User.query.filter_by(id=form.id.data).first():
+            form.id.errors.append('That id is already taken.')
+        else:
+            hashed_passwd = bcrypt.hashpw(form.passwd.data.encode('utf-8'), bcrypt.gensalt())
+            new_user = User(
+                id=form.id.data,
+                name=form.name.data,
+                about=form.about.data,
+                passwd=hashed_passwd
+            )
+            db.session.add(new_user)
+            db.session.commit()
+            return redirect(url_for('index'))
+    return render_template('signup.html', form=form)
+
 @app.route('/users/login', methods=['GET', 'POST'])
 def login():
-    return "Work in progress..."
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(id=form.id.data).first()
+        if user and bcrypt.checkpw(form.passwd.data.encode('utf-8'), user.passwd):
+            login_user(user)
+            return redirect(url_for('list_enrollments'))
+        form.passwd.errors.append('Invalid id or password.')
+    return render_template('login.html', form=form)
 
-# TODO: from hwk-3
 @app.route('/users/signout', methods=['GET', 'POST'])
 def signout():
-    return "Work in progress..."
+    logout_user()
+    return redirect(url_for('index'))
 
 # TODO
 @app.route('/enrollments')
