@@ -12,6 +12,7 @@ rectangle "GPA Calculator" {
   usecase "Update Letter Grade" as UC6
   usecase "Delete Completed Course" as UC7
   usecase "Calculate GPA" as UC8
+  usecase "Sign Out" as UC9
 }
 
 Student --> UC1
@@ -21,12 +22,13 @@ Student --> UC4
 Student --> UC5
 Student --> UC6
 Student --> UC7
+Student --> UC9
 
-UC3 ..> UC2 : <<include>>
-UC4 ..> UC2 : <<include>>
-UC5 ..> UC2 : <<include>>
-UC6 ..> UC2 : <<include>>
-UC7 ..> UC2 : <<include>>
+UC3 ..> UC2 
+UC4 ..> UC2  
+UC5 ..> UC2  
+UC6 ..> UC2 
+UC7 ..> UC2 
 
 UC5 ..> UC8 : <<include>>
 
