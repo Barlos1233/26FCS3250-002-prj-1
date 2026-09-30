@@ -12,7 +12,6 @@ rectangle "GPA Calculator" {
   usecase "Update Letter Grade" as UC6
   usecase "Delete Completed Course" as UC7
   usecase "Calculate GPA" as UC8
-  usecase "Sign Out" as UC9
 }
 
 Student --> UC1
@@ -22,7 +21,6 @@ Student --> UC4
 Student --> UC5
 Student --> UC6
 Student --> UC7
-Student --> UC9
 
 UC3 ..> UC2 
 UC4 ..> UC2  
