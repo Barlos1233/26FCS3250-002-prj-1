@@ -24,6 +24,6 @@ class Enrollment {
 
 User "1" -- "0..*" Enrollment : enrollments
 Course "1" -- "0..*" Enrollment : enrollments
-User "0..*" -- "0..*" Course : courses / students >
+
 
 @enduml
