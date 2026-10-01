@@ -22,11 +22,11 @@ Student --> UC5
 Student --> UC6
 Student --> UC7
 
-UC3 ..> UC2 : <<include>>
-UC4 ..> UC2 : <<include>>
-UC5 ..> UC2 : <<include>>
-UC6 ..> UC2 : <<include>>
-UC7 ..> UC2 : <<include>>
+UC3 ..> UC2 
+UC4 ..> UC2  
+UC5 ..> UC2  
+UC6 ..> UC2 
+UC7 ..> UC2 
 
 UC5 ..> UC8 : <<include>>
 
