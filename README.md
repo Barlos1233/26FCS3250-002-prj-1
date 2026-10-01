@@ -41,23 +41,23 @@ The project involves developing a web application that allows students to track 
 
 ## Schedule 
 
-Estimate a schedule for this project by completing the table below. 
-
-|Phase|Task|Start|End|Duration|Deliverable|
+| Phase | Task | Start | End | Duration | Deliverable |
 |---|---|---|---|---|---|
-|Modeling|Requirements Analysis|mm/dd/26|mm/dd/26|99 days|Use Case Diagram|
-|Modeling|Data Model|mm/dd/26|mm/dd/26|99 days|Class Diagram|
-|Construction|Coding|mm/dd/26|mm/dd/26|99 days|Code|
-|Construction|Testing|mm/dd/26|mm/dd/26|99 days|Test Report|
-|Deployment|Delivery|mm/dd/26|mm/dd/26|99 days|Final Commit/Push|
+| Modeling | Requirements Analysis | 9/24/26 | 9/26/26 | 3 days | Use Case Diagram |
+| Modeling | Data Model | 9/26/26 | 9/27/26 | 2 days | Class Diagram |
+| Construction | Coding | 9/28/26 | 10/2/26 | 5 days | Code |
+| Construction | Testing | 10/2/26 | 10/4/26 | 3 days | Test Report |
+| Deployment | Delivery | 10/4/26 | 10/4/26 | 1 day | Final Commit/Push |
 
 ## Team Roles
 
-Assign roles to each team member by completing the table below. A member may take on more than one role.
-
-|Name|Role(s)|
-|--|--|
-|name|manager,developer,tester,documenter|
+| Name | Role(s) |
+|---|---|
+| Carlos Viramontes | Manager |
+| Abdalbaset Taher | Developer |
+| Trevor Strong | Developer |
+| Saran Sukumar | Tester |
+| Mason Burrill | Documenter |
 
 # Modeling Phase
 
