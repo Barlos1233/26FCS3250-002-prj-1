@@ -139,20 +139,29 @@ Before beginning implementation, a team representative must meet with the instru
 | Register a new account | — | — | Not tested |
 | Reject duplicate user ID | — | — | Not tested |
 | Reject mismatched passwords | — | — | Not tested |
+| Reject missing required signup fields | — | — | Not tested |
 | Log in with valid credentials | — | — | Not tested |
 | Reject invalid credentials | — | — | Not tested |
 | Sign out | — | — | Not tested |
 | Block unauthenticated enrollment access | — | — | Not tested |
 | Load at least five courses | — | — | Not tested |
 | Add a completed course and grade | — | — | Not tested |
+| Reject invalid enrollment input | — | — | Not tested |
+| Handle adding the same course twice | — | — | Not tested |
 | List the current student's courses | — | — | Not tested |
 | Update an existing course's grade | — | — | Not tested |
 | Delete a completed course | — | — | Not tested |
-| Calculate GPA using different course credits | — | — | Not tested |
+| Calculate credit-weighted GPA | — | — | Not tested |
+| Calculate GPA with A+ and F grades | — | — | Not tested |
 | Display GPA with no enrollments | — | — | Not tested |
-| Recalculate GPA after grade changes or deletion | — | — | Not tested |
+| Recalculate GPA after a grade update | — | — | Not tested |
+| Recalculate GPA after deletion | — | — | Not tested |
+| Delete the final enrollment | — | — | Not tested |
 | Keep each student's enrollments separate | — | — | Not tested |
+| Preserve data after an application restart | — | — | Not tested |
 | Install the GPA library from PyPI | — | — | Not tested |
+| Handle missing or unrecognized grades in the library | — | — | Not tested |
+| Handle no graded credits in the library | — | — | Not tested |
 | Build and run the finished app in Docker | — | — | Not tested |
 
 # Deployment Phase
