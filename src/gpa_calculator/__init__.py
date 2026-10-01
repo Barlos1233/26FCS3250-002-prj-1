@@ -14,13 +14,21 @@ GRADE_POINTS = {
     'F': 0.0
 }
 
-# TODO 
 def calculate_gpa(enrollments):
     '''
-    Computes the credit-weighted GPA from a list of dictionary-like enrollments.
-    Each enrollment is expected to provide a 'grade' key (e.g. 'A+', 'B-', ...)
-    and a 'credits' key (the number of credit hours for the course).
-    Enrollments with no grade yet, or an unrecognized grade, are ignored.
-    Returns 0 when there are no graded credits to average.
+    Returns the credit-weighted GPA. Each enrollment is a dict with a 'grade'
+    and 'credits'. Ungraded or unknown grades are skipped. Returns 0 if
+    nothing is graded.
     '''
-    return 0
+    total_points = 0.0
+    total_credits = 0
+    for enrollment in enrollments:
+        grade = enrollment.get('grade')
+        credits = enrollment.get('credits')
+        if grade not in GRADE_POINTS or not credits:
+            continue
+        total_points += GRADE_POINTS[grade] * credits
+        total_credits += credits
+    if total_credits == 0:
+        return 0
+    return total_points / total_credits
