@@ -65,6 +65,8 @@ The project involves developing a web application that allows students to track 
 
 Based on the project description, perform a requirements analysis by developing a UML use case diagram that captures the system's key functionalities and user interactions.
 
+[View our Use Case Diagram](uml/use_case.wsd)
+
 ## Data Model 
 
 Based on the data model defined in [src/models.py](src/models.py), create a UML class diagram to document the system's structure. The model includes the following entities:
@@ -73,7 +75,9 @@ Based on the data model defined in [src/models.py](src/models.py), create a UML 
 * Courses: prefix, number, name, credits
 * Enrollment: user_id, course_prefix, course_number, grade
 
-Make sure that your class diagram shows the association between **User**, **Course**, and **Enrollment**. 
+Make sure that your class diagram shows the association between **User**, **Course**, and **Enrollment**.
+
+[View our Class Diagram](uml/class.wsd)
 
 ## Baseline Implementation
 
@@ -115,7 +119,7 @@ Dockerfile
 Create a public GitHub repository for your project. Add all team members as collaborators. Share the URL of your repo with your instructor:  
 
 ```
-Project's GitHub Repository: <<URL>>
+Project's GitHub Repository: <<https://github.com/Barlos1233/26FCS3250-002-prj-1.git>>
 ```
 
 Following software development collaboration best practices, create a **dev** branch to manage beta versions of your project. Additionally, each team member should create local temporary branches for individual development and testing tasks. Once the **dev** branch reaches a stable state, merge it into the **main** branch. The **main** branch should be protected. 
