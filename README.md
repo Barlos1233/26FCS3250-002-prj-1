@@ -134,12 +134,26 @@ Before beginning implementation, a team representative must meet with the instru
 
 # Testing Phase
 
-At this stage, you are NOT expected to write automated tests. Instead, you should perform manual testing, documenting your test results using the table provided below.
-
-|Functionality Tested|Date|Time|Result|
-|--|--|--|--|
-|Sign Up|99/99/23|99:99|passed|
-|...|...|...|...|
+| Functionality Tested | Date | Time | Result |
+|---|---|---|---|
+| Register a new account | — | — | Not tested |
+| Reject duplicate user ID | — | — | Not tested |
+| Reject mismatched passwords | — | — | Not tested |
+| Log in with valid credentials | — | — | Not tested |
+| Reject invalid credentials | — | — | Not tested |
+| Sign out | — | — | Not tested |
+| Block unauthenticated enrollment access | — | — | Not tested |
+| Load at least five courses | — | — | Not tested |
+| Add a completed course and grade | — | — | Not tested |
+| List the current student's courses | — | — | Not tested |
+| Update an existing course's grade | — | — | Not tested |
+| Delete a completed course | — | — | Not tested |
+| Calculate GPA using different course credits | — | — | Not tested |
+| Display GPA with no enrollments | — | — | Not tested |
+| Recalculate GPA after grade changes or deletion | — | — | Not tested |
+| Keep each student's enrollments separate | — | — | Not tested |
+| Install the GPA library from PyPI | — | — | Not tested |
+| Build and run the finished app in Docker | — | — | Not tested |
 
 # Deployment Phase
 
