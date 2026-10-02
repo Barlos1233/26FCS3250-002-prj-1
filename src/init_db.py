@@ -8,7 +8,7 @@ Description: Project 1 - GPA Calculator
 from app import app, db
 from app.models import Course
 
-# TODO
+
 courses = [
     ("CS1010", 1010, "Introduction to Computer Science", 3),
     ("CS1020", 1020, "Data Structures and Algorithms", 4),
