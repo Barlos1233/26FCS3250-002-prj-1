@@ -8,8 +8,8 @@ Description: Project 1 - GPA Calculator
 from app import app, db
 from app.models import User, Course, Enrollment
 from app.forms import SignUpForm, LoginForm, EnrollmentForm, DeleteEnrollmentForm
-# TODO
-# from gpa_calculator_xx import calculate_gpa
+
+from gpa_calculator_xx import calculate_gpa
 from flask import render_template, redirect, url_for, request
 from flask_login import login_required, login_user, logout_user, current_user
 import bcrypt
@@ -57,20 +57,93 @@ def signout():
     logout_user()
     return redirect(url_for('index'))
 
-# TODO
+
 @app.route('/enrollments')
 @login_required
 def list_enrollments():
-    return "Work in progress..."
+    enrollments = Enrollment.queryp.filter_by(user_id=current_user.id).all()
+    
+    gpa_data = []
+    
+    for enrollment in enrollments:
+        gpa_data.append({
+            'grade': enrollment.grade,
+            'credits': enrollment.course.credits
+        })
 
-# TODO
+    gpa = calculate_gpa(gpa_data)
+    
+    return render_template(
+        'enrollments.html',
+        enrollments=enrollments,
+        gpa=gpa
+    )
+
+
 @app.route('/enrollments/delete/<course_prefix>/<course_number>', methods=['POST'])
 @login_required
 def delete_enrollment(course_prefix, course_number):
-    return "Work in progress..."
+    
+    form = DeleteEnrollmentForm()
+    
+    if form.validate_on_submit():
+        
+        enrollment = Enrollment.query.filter_by(
+            user_id=current_user.id,
+            course_prefix=course_prefix,
+            course_number=course_number
+        ).first()
+        
+        if enrollment:
+            db.session.delete(enrollment)
+            db.session.commit()
+            
+    return redirect(url_for('list_enrollments'))
 
 # TODO
 @app.route('/enrollments/create', methods=['GET', 'POST'])
 @login_required
 def create_enrollment():
-    return "Work in progress..."
+    
+    form = EnrollmentForm()
+    courses = Course.query.all()
+    
+    form.course.choices = [
+        (f'{course.prefix}|{course.numberr}',
+         f'{course.prefix} {course.number} - {course.name}'
+        )
+        for course in courses
+    ]
+    
+    if form.validate_on_submit():
+        
+        course_prefix, course_number = form.course.data.split('|')
+        
+        existing_enrollment =Enrollment.query.filter_by(
+            user_id=current_user.id,
+            course_prefix=course_prefix,
+            course_number=course_number
+        ).first()
+        
+        if existing_enrollment:
+            form.course.errors.append(
+                'You are already enrolled in that course.'
+                )
+        
+        else:
+            enrollment = Enrollment(
+                user_id=current_user.id,
+                course_prefix=course_prefix,
+                course_number=course_number,
+                grade=form.grade.data
+            )
+            
+            db.session.add(enrollment)
+            db.session.commit()
+            
+            return redirect(url_for('list_enrollments'))
+    
+    return render_template(
+        'create_enrollment.html',
+        form=form
+        )
