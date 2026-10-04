@@ -146,10 +146,10 @@ Before beginning implementation, a team representative must meet with the instru
 | Reject missing required signup fields | 10/03/26 | 11.36 pm  | Passed |
 | Log in with valid credentials | 10/03/26 | 11.40 pm  | Passed |
 | Reject invalid credentials | 10/03/26 | 11.42 pm | Passed |
-| Sign out | — | — | Not tested |
-| Block unauthenticated enrollment access | — | — | Not tested |
-| Load at least five courses | — | — | Not tested |
-| Add a completed course and grade | — | — | Not tested |
+| Sign out | 10/03/26 | 11.47 pm |  Passed — User was logged out and redirected to index. |
+| Block unauthenticated enrollment access | 10/03/26 | 11.46pm | Passed — /enrollments correctly requires login. |
+| Load at least five courses | 10/03/26 | 11.48 | Failed — init_db.py is empty; 0 courses loaded. |
+| Add a completed course and grade | 10/03/26  | 11.49pm |Not implemented — route returns “Work in progress…”. |
 | Reject invalid enrollment input | — | — | Not tested |
 | Handle adding the same course twice | — | — | Not tested |
 | List the current student's courses | — | — | Not tested |
