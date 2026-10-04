@@ -9,7 +9,7 @@ from app import app, db
 from app.models import User, Course, Enrollment
 from app.forms import SignUpForm, LoginForm, EnrollmentForm, DeleteEnrollmentForm
 
-from gpa_calculator_xx import calculate_gpa
+from gpa_calculator import calculate_gpa
 from flask import render_template, redirect, url_for, request
 from flask_login import login_required, login_user, logout_user, current_user
 import bcrypt
@@ -61,7 +61,7 @@ def signout():
 @app.route('/enrollments')
 @login_required
 def list_enrollments():
-    enrollments = Enrollment.queryp.filter_by(user_id=current_user.id).all()
+    enrollments = Enrollment.query.filter_by(user_id=current_user.id).all()
     
     gpa_data = []
     
@@ -109,7 +109,7 @@ def create_enrollment():
     courses = Course.query.all()
     
     form.course.choices = [
-        (f'{course.prefix}|{course.numberr}',
+        (f'{course.prefix}|{course.number}',
          f'{course.prefix} {course.number} - {course.name}'
         )
         for course in courses
