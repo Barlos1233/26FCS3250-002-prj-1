@@ -140,12 +140,12 @@ Before beginning implementation, a team representative must meet with the instru
 
 | Functionality Tested | Date | Time | Result |
 |---|---|---|---|
-| Register a new account | — | — | Not tested |
-| Reject duplicate user ID | — | — | Not tested |
-| Reject mismatched passwords | — | — | Not tested |
-| Reject missing required signup fields | — | — | Not tested |
-| Log in with valid credentials | — | — | Not tested |
-| Reject invalid credentials | — | — | Not tested |
+| Register a new account | 10/03/26 | 11.30 pm | Passed |
+| Reject duplicate user ID | 10/03/26 | 11.32pm| Passed |
+| Reject mismatched passwords |  10/03/26| 11.33pm | passed |
+| Reject missing required signup fields | 10/03/26 | 11.36 pm  | Passed |
+| Log in with valid credentials | 10/03/26 | 11.40 pm  | Passed |
+| Reject invalid credentials | 10/03/26 | 11.42 pm | Passed |
 | Sign out | — | — | Not tested |
 | Block unauthenticated enrollment access | — | — | Not tested |
 | Load at least five courses | — | — | Not tested |
