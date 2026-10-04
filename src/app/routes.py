@@ -76,7 +76,8 @@ def list_enrollments():
     return render_template(
         'enrollments.html',
         enrollments=enrollments,
-        gpa=gpa
+        gpa=gpa,
+        delete_form=DeleteEnrollmentForm()
     )
 
 
