@@ -41,29 +41,31 @@ The project involves developing a web application that allows students to track 
 
 ## Schedule 
 
-Estimate a schedule for this project by completing the table below. 
-
-|Phase|Task|Start|End|Duration|Deliverable|
+| Phase | Task | Start | End | Duration | Deliverable |
 |---|---|---|---|---|---|
-|Modeling|Requirements Analysis|mm/dd/26|mm/dd/26|99 days|Use Case Diagram|
-|Modeling|Data Model|mm/dd/26|mm/dd/26|99 days|Class Diagram|
-|Construction|Coding|mm/dd/26|mm/dd/26|99 days|Code|
-|Construction|Testing|mm/dd/26|mm/dd/26|99 days|Test Report|
-|Deployment|Delivery|mm/dd/26|mm/dd/26|99 days|Final Commit/Push|
+| Modeling | Requirements Analysis | 9/24/26 | 9/26/26 | 3 days | Use Case Diagram |
+| Modeling | Data Model | 9/26/26 | 9/27/26 | 2 days | Class Diagram |
+| Construction | Coding | 9/28/26 | 10/2/26 | 5 days | Code |
+| Construction | Testing | 10/2/26 | 10/4/26 | 3 days | Test Report |
+| Deployment | Delivery | 10/4/26 | 10/4/26 | 1 day | Final Commit/Push |
 
 ## Team Roles
 
-Assign roles to each team member by completing the table below. A member may take on more than one role.
-
-|Name|Role(s)|
-|--|--|
-|name|manager,developer,tester,documenter|
+| Name | Role(s) |
+|---|---|
+| Carlos Viramontes | Manager |
+| Abdalbaset Taher | Developer |
+| Trevor Strong | Developer |
+| Saran Sukumar | Tester |
+| Mason Burrill | Documenter |
 
 # Modeling Phase
 
 ## Requirements Analysis 
 
 Based on the project description, perform a requirements analysis by developing a UML use case diagram that captures the system's key functionalities and user interactions.
+
+[View our Use Case Diagram](uml/use_case.wsd)
 
 ## Data Model 
 
@@ -73,7 +75,9 @@ Based on the data model defined in [src/models.py](src/models.py), create a UML 
 * Courses: prefix, number, name, credits
 * Enrollment: user_id, course_prefix, course_number, grade
 
-Make sure that your class diagram shows the association between **User**, **Course**, and **Enrollment**. 
+Make sure that your class diagram shows the association between **User**, **Course**, and **Enrollment**.
+
+[View our Class Diagram](uml/class.wsd)
 
 ## Baseline Implementation
 
@@ -115,7 +119,7 @@ Dockerfile
 Create a public GitHub repository for your project. Add all team members as collaborators. Share the URL of your repo with your instructor:  
 
 ```
-Project's GitHub Repository: <<URL>>
+Project's GitHub Repository: <<https://github.com/Barlos1233/26FCS3250-002-prj-1.git>>
 ```
 
 Following software development collaboration best practices, create a **dev** branch to manage beta versions of your project. Additionally, each team member should create local temporary branches for individual development and testing tasks. Once the **dev** branch reaches a stable state, merge it into the **main** branch. The **main** branch should be protected. 
@@ -134,12 +138,34 @@ Before beginning implementation, a team representative must meet with the instru
 
 # Testing Phase
 
-At this stage, you are NOT expected to write automated tests. Instead, you should perform manual testing, documenting your test results using the table provided below.
-
-|Functionality Tested|Date|Time|Result|
-|--|--|--|--|
-|Sign Up|99/99/23|99:99|passed|
-|...|...|...|...|
+| Functionality Tested | Date | Time | Result |
+|---|---|---|---|
+| Register a new account | 10/03/26 | 11.30 pm | Passed |
+| Reject duplicate user ID | 10/03/26 | 11.32pm| Passed |
+| Reject mismatched passwords |  10/03/26| 11.33pm | passed |
+| Reject missing required signup fields | 10/03/26 | 11.36 pm  | Passed |
+| Log in with valid credentials | 10/03/26 | 11.40 pm  | Passed |
+| Reject invalid credentials | 10/03/26 | 11.42 pm | Passed |
+| Sign out | 10/03/26 | 11.47 pm |  Passed — User was logged out and redirected to index. |
+| Block unauthenticated enrollment access | 10/03/26 | 11.46pm | Passed — /enrollments correctly requires login. |
+| Load at least five courses | 10/03/26 | 11.48 |  passed |
+| Add a completed course and grade | 10/03/26  | 11.49pm |passed   |
+| Reject invalid enrollment input | 10/04/26 | 5.51pm |  passed |
+| Handle adding the same course twice | 10/03/25 | 5.49pm |   passed |
+| List the current student's courses | 10/03/25| 5.48|  passed |
+| Update an existing course's grade | 10/03/25 | 5.48|  Passed |
+| Delete a completed course | 10/04/25 | 5.45pm |  passed |
+| Calculate credit-weighted GPA | 10/04/26| 5.47 |  passed |
+| Calculate GPA with A+ and F grades | 10/04/26 | 5.40pm | passed |
+| Display GPA with no enrollments | 10/04/26 | 5.52pm |   passed  |
+| Recalculate GPA after a grade update | 10/04/26 | 5.54pm| passed |
+| Recalculate GPA after deletion | 10/04/26 | 5.56pm | passed |
+| Delete the final enrollment | 10/04/26 | 5.58pm | passed |
+| Keep each student's enrollments separate | 10/04/26 | 5.58 pm| passed |
+| Preserve data after an application restart | 10/04/26 | 6.04pm | Data persists using database / passed |
+| Handle missing or unrecognized grades in the library | 10/04/26 | 6.06 pm | passed|
+| Handle no graded credits in the library | 10/04/26| 6.07 pm  | passed |
+| Build and run the finished app in Docker | 10/04/26 | 6pm-6.50pm  | Passed!! all core features function correctly inside Docker, matching the behavior of the normal Flask app.|
 
 # Deployment Phase
 

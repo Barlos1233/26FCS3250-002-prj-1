@@ -1,3 +1,33 @@
 @startuml use_case
+left to right direction
+
+actor Student
+
+rectangle "GPA Calculator" {
+  usecase "Register" as UC1
+  usecase "Log In" as UC2
+  usecase "Enter Completed Course\n& Grade" as UC3
+  usecase "View Completed Courses" as UC4
+  usecase "View Overall GPA" as UC5
+  usecase "Update Letter Grade" as UC6
+  usecase "Delete Completed Course" as UC7
+  usecase "Calculate GPA" as UC8
+}
+
+Student --> UC1
+Student --> UC2
+Student --> UC3
+Student --> UC4
+Student --> UC5
+Student --> UC6
+Student --> UC7
+
+UC3 ..> UC2 
+UC4 ..> UC2  
+UC5 ..> UC2  
+UC6 ..> UC2 
+UC7 ..> UC2 
+
+UC5 ..> UC8 : <<include>>
 
 @enduml
