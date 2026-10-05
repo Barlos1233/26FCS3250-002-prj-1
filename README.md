@@ -128,6 +128,23 @@ To run an initial course load, modify [src/init_db.py](src/init_db.py) to insert
 
 As part of the project requirements, you must create your own **gpa_calculator** library according to the provided model. The library must be packaged and published to PyPI so that it can be installed using pip. 
 
+## Our GPA Calculator Library
+
+Our credit-weighted GPA calculator is published on
+[PyPI as gpa-calculator-baset](https://pypi.org/project/gpa-calculator-baset/).
+
+Install it with:
+
+```bash
+pip install gpa-calculator-baset
+```
+
+Import the calculator with:
+
+```python
+from gpa_calculator import calculate_gpa
+```
+
 Before beginning implementation, a team representative must meet with the instructor for a **mandatory** checkpoint. This can be done eiter in person or online. Either way, it needs to be scheduled. Be prepared to present the following:
 
 * Use case and class diagrams

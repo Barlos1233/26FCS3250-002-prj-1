@@ -1,7 +1,7 @@
 '''
 CS3250 - Software Development Methods and Tools
 Instructor: Thyago Mota
-Student(s):
+Students: Carlos, Mason, Trevor, Abdal, Saran
 Description: Project 1 - GPA Calculator
 '''
 

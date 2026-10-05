@@ -1,7 +1,7 @@
 '''
 CS3250 - Software Development Methods and Tools
 Instructor: Thyago Mota
-Student:
+Students: Carlos, Mason, Trevor, Abdal, Saran
 Description: Homework 03 - Forms for the User Authentication Web App
 '''
 
@@ -34,6 +34,10 @@ class EnrollmentForm(FlaskForm):
     course = SelectField('Course', validators=[DataRequired()])
     grade = SelectField('Grade', choices=GRADE_CHOICES, validators=[DataRequired()])
     submit = SubmitField('Confirm')
+
+class UpdateEnrollmentForm(FlaskForm):
+    grade = SelectField('Grade', choices=GRADE_CHOICES, validators=[DataRequired()])
+    submit = SubmitField('Update')
 
 class DeleteEnrollmentForm(FlaskForm):
     submit = SubmitField('Delete')
