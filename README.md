@@ -157,33 +157,32 @@ Before beginning implementation, a team representative must meet with the instru
 
 | Functionality Tested | Date | Time | Result |
 |---|---|---|---|
-| Register a new account | — | — | Not tested |
-| Reject duplicate user ID | — | — | Not tested |
-| Reject mismatched passwords | — | — | Not tested |
-| Reject missing required signup fields | — | — | Not tested |
-| Log in with valid credentials | — | — | Not tested |
-| Reject invalid credentials | — | — | Not tested |
-| Sign out | — | — | Not tested |
-| Block unauthenticated enrollment access | — | — | Not tested |
-| Load at least five courses | — | — | Not tested |
-| Add a completed course and grade | — | — | Not tested |
-| Reject invalid enrollment input | — | — | Not tested |
-| Handle adding the same course twice | — | — | Not tested |
-| List the current student's courses | — | — | Not tested |
-| Update an existing course's grade | — | — | Not tested |
-| Delete a completed course | — | — | Not tested |
-| Calculate credit-weighted GPA | — | — | Not tested |
-| Calculate GPA with A+ and F grades | — | — | Not tested |
-| Display GPA with no enrollments | — | — | Not tested |
-| Recalculate GPA after a grade update | — | — | Not tested |
-| Recalculate GPA after deletion | — | — | Not tested |
-| Delete the final enrollment | — | — | Not tested |
-| Keep each student's enrollments separate | — | — | Not tested |
-| Preserve data after an application restart | — | — | Not tested |
-| Install the GPA library from PyPI | — | — | Not tested |
-| Handle missing or unrecognized grades in the library | — | — | Not tested |
-| Handle no graded credits in the library | — | — | Not tested |
-| Build and run the finished app in Docker | — | — | Not tested |
+| Register a new account | 10/03/26 | 11.30 pm | Passed |
+| Reject duplicate user ID | 10/03/26 | 11.32pm| Passed |
+| Reject mismatched passwords |  10/03/26| 11.33pm | passed |
+| Reject missing required signup fields | 10/03/26 | 11.36 pm  | Passed |
+| Log in with valid credentials | 10/03/26 | 11.40 pm  | Passed |
+| Reject invalid credentials | 10/03/26 | 11.42 pm | Passed |
+| Sign out | 10/03/26 | 11.47 pm |  Passed — User was logged out and redirected to index. |
+| Block unauthenticated enrollment access | 10/03/26 | 11.46pm | Passed — /enrollments correctly requires login. |
+| Load at least five courses | 10/03/26 | 11.48 |  passed |
+| Add a completed course and grade | 10/03/26  | 11.49pm |passed   |
+| Reject invalid enrollment input | 10/04/26 | 5.51pm |  passed |
+| Handle adding the same course twice | 10/03/25 | 5.49pm |   passed |
+| List the current student's courses | 10/03/25| 5.48|  passed |
+| Update an existing course's grade | 10/03/25 | 5.48|  Passed |
+| Delete a completed course | 10/04/25 | 5.45pm |  passed |
+| Calculate credit-weighted GPA | 10/04/26| 5.47 |  passed |
+| Calculate GPA with A+ and F grades | 10/04/26 | 5.40pm | passed |
+| Display GPA with no enrollments | 10/04/26 | 5.52pm |   passed  |
+| Recalculate GPA after a grade update | 10/04/26 | 5.54pm| passed |
+| Recalculate GPA after deletion | 10/04/26 | 5.56pm | passed |
+| Delete the final enrollment | 10/04/26 | 5.58pm | passed |
+| Keep each student's enrollments separate | 10/04/26 | 5.58 pm| passed |
+| Preserve data after an application restart | 10/04/26 | 6.04pm | Data persists using database / passed |
+| Handle missing or unrecognized grades in the library | 10/04/26 | 6.06 pm | passed|
+| Handle no graded credits in the library | 10/04/26| 6.07 pm  | passed |
+| Build and run the finished app in Docker | 10/04/26 | 6pm-6.50pm  | Passed!! all core features function correctly inside Docker, matching the behavior of the normal Flask app.|
 
 # Deployment Phase
 
