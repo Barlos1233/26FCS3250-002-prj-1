@@ -148,25 +148,25 @@ Before beginning implementation, a team representative must meet with the instru
 | Reject invalid credentials | 10/03/26 | 11.42 pm | Passed |
 | Sign out | 10/03/26 | 11.47 pm |  Passed — User was logged out and redirected to index. |
 | Block unauthenticated enrollment access | 10/03/26 | 11.46pm | Passed — /enrollments correctly requires login. |
-| Load at least five courses | 10/03/26 | 11.48 | Failed — init_db.py is empty; 0 courses loaded. |
-| Add a completed course and grade | 10/03/26  | 11.49pm |Not implemented — route returns “Work in progress…”. |
-| Reject invalid enrollment input | — | — | Not tested |
-| Handle adding the same course twice | — | — | Not tested |
-| List the current student's courses | — | — | Not tested |
-| Update an existing course's grade | — | — | Not tested |
-| Delete a completed course | — | — | Not tested |
-| Calculate credit-weighted GPA | — | — | Not tested |
-| Calculate GPA with A+ and F grades | — | — | Not tested |
-| Display GPA with no enrollments | — | — | Not tested |
-| Recalculate GPA after a grade update | — | — | Not tested |
-| Recalculate GPA after deletion | — | — | Not tested |
-| Delete the final enrollment | — | — | Not tested |
-| Keep each student's enrollments separate | — | — | Not tested |
-| Preserve data after an application restart | — | — | Not tested |
+| Load at least five courses | 10/03/26 | 11.48 |  passed |
+| Add a completed course and grade | 10/03/26  | 11.49pm |passed   |
+| Reject invalid enrollment input | 10/04/26 | 5.51pm |  passed |
+| Handle adding the same course twice | 10/03/25 | 5.49pm |   passed |
+| List the current student's courses | 10/03/25| 5.48|  passed |
+| Update an existing course's grade | 10/03/25 | 5.48|  tested |
+| Delete a completed course | 10/04/25 | 5.45pm |  passed |
+| Calculate credit-weighted GPA | 10/04/26| 5.47 |  passed |
+| Calculate GPA with A+ and F grades | 10/04/26 | 5.40pm | passed |
+| Display GPA with no enrollments | 10/04/26 | 5.52pm |   passed  |
+| Recalculate GPA after a grade update | 10/04/26 | 5.54pm| passed |
+| Recalculate GPA after deletion | 10/04/26 | 5.56pm | passed |
+| Delete the final enrollment | 10/04/26 | 5.58pm | passed |
+| Keep each student's enrollments separate | 10/04/26 | 5.58 pm| passed |
+| Preserve data after an application restart | 10/04/26 | 6.04pm | Data persists using database / passed |
 | Install the GPA library from PyPI | — | — | Not tested |
-| Handle missing or unrecognized grades in the library | — | — | Not tested |
-| Handle no graded credits in the library | — | — | Not tested |
-| Build and run the finished app in Docker | — | — | Not tested |
+| Handle missing or unrecognized grades in the library | 10/04/26 | 6.06 pm | passed|
+| Handle no graded credits in the library | 10/04/26| 6.07 pm  | passed |
+| Build and run the finished app in Docker | — | — |  |
 
 # Deployment Phase
 
