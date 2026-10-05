@@ -163,10 +163,9 @@ Before beginning implementation, a team representative must meet with the instru
 | Delete the final enrollment | 10/04/26 | 5.58pm | passed |
 | Keep each student's enrollments separate | 10/04/26 | 5.58 pm| passed |
 | Preserve data after an application restart | 10/04/26 | 6.04pm | Data persists using database / passed |
-| Install the GPA library from PyPI | — | — | Not tested |
 | Handle missing or unrecognized grades in the library | 10/04/26 | 6.06 pm | passed|
 | Handle no graded credits in the library | 10/04/26| 6.07 pm  | passed |
-| Build and run the finished app in Docker | — | — |  |
+| Build and run the finished app in Docker | 10/04/26 | 6pm-6.50pm  | Passed!! all core features function correctly inside Docker, matching the behavior of the normal Flask app.|
 
 # Deployment Phase
 
