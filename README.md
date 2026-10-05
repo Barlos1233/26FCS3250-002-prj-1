@@ -153,7 +153,7 @@ Before beginning implementation, a team representative must meet with the instru
 | Reject invalid enrollment input | 10/04/26 | 5.51pm |  passed |
 | Handle adding the same course twice | 10/03/25 | 5.49pm |   passed |
 | List the current student's courses | 10/03/25| 5.48|  passed |
-| Update an existing course's grade | 10/03/25 | 5.48|  tested |
+| Update an existing course's grade | 10/03/25 | 5.48|  Passed |
 | Delete a completed course | 10/04/25 | 5.45pm |  passed |
 | Calculate credit-weighted GPA | 10/04/26| 5.47 |  passed |
 | Calculate GPA with A+ and F grades | 10/04/26 | 5.40pm | passed |
